@@ -1,12 +1,13 @@
+import * as clipboardy from 'clipboardy';
 const sname = 5;
 let a: number;
 
 export function HelloWorld(){
     return 'Hello World!'
 }
-console.log('Hello World:');
-if (true) {
-    console.log('this is ture');
-} else {
-    console.log('fail');
+const autoClip=()=>{
+    // clipboardy.writeSync('🦄');
+    return(typeof clipboardy.readSync());
 }
+
+console.log(autoClip());
